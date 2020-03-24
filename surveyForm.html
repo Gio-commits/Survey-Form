@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" type="text/css" href="surveyForm.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+
+  <header class="header">
+    <h1 id="title">Travel details</h1>
+      <p id="description">Please fill in this form and select your travel options.</p>
+  </header>
+  
+  <main>
+    
+      
+    <form id="survey-form" action="/my-handling-form-page" method="post">
+       
+      <label for="name" id="name-label">Passenger name:</label> <input type="text" name="name" id="name" placeholder="Enter your name"> 
+      <label for="email" id="email-label">Email:</label> <input type="email" name="email" id="email" placeholder="Enter your Email"> 
+      <label for="number" id="number-label">Number of luggages</label> <input type="number" name="number" id="number" min="6" max="10" placeholder="0">  <!-- need to insert or check the check format fonction -->
+       
+      <div id="class_option">
+        <span>Select in which  class you would like to travel: </span>
+        <select id="dropdown" name="class_option">
+          <option value="first_class" name>First Class</option>
+          <option value="business">Business</option>
+          <option value="prenium_economy">Prenium Economy</option>
+          <option value="economy">Economy</option>
+        </select>
+      </div>  
+        
+        <div id="checkbox">
+          <table>
+            <thead>
+              <span class="returnLine">Select which  seat you would prefer:</span>
+            </thead> 
+            <tbody>
+              <tr><td><input type="checkbox" value="window" name="seat_position"><span class="addMargin">Window</span></input></td></tr>
+              <tr><td><input type="checkbox" value="middle" name="seat_position"><span class="addMargin">Middle</span></input></td></tr>
+              <tr><td><input type="checkbox" value="alley" name="seat_position"><span class="addMargin">Alley</span></input></td></tr>
+              </tbody>
+          </table>
+        </div>
+        
+        <div id="meal_type">
+          <table>
+            <thead>
+              <span class="returnLine">Select which  meal you would like to have: </span>
+            </thead> 
+            <tbody>
+              <tr><td><input type="radio" value="normal_meal" name="meal"><span class="addMargin">Normal</span></input></td></tr>
+              <tr><td><input type="radio" value="normal_meal_glutenfree" name="meal"><span class="addMargin">Normal and gluten  free</span></input></td></tr>  
+              <tr><td><input type="radio" value="Vegetarian_meal" name="meal"><span class="addMargin">Vegetarian</span></input></td></tr>  
+              <tr><td><input type="radio" value="Vegan_meal" name="meal"><span class="addMargin">Vegan</span></input></td></tr>  
+            </tbody>
+          </table>
+        </div>
+  
+  
+      <div id="extra">
+        <label for="comments">Let's us know if you can make your journey better:</label><br>
+        <textarea id="comments" rows="10" cols="30" placeholder="">  </textarea>  
+      </div>
+
+      <button type="submit" id="formSend">Enter</button>
+    </form>
+  </main>
+  
+  <footer>
+    <p>By Joe as Design project for <a href="https://www.freecodecamp.org">@Freecodecamp</a></p>
+    <script type="text/javascript" src="surveyForm.js"></script>
+  </footer>
+  
+
+
+
+</body>
+</html>
+  
